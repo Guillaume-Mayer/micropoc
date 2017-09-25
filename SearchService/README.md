@@ -1,6 +1,9 @@
 # Search Service
 
-With Elastic Search <https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html>
+Microservice de busqueda de productos
+
+* Rest Api: NodeJS + Express
+* Store : Elastic Search <https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html>
 
 ## Buscar productos
 
