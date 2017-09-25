@@ -1,0 +1,10 @@
+[package]
+name = "order-server"
+version = "0.1.0"
+authors = ["Guillaume <gmayer@arkho.tech>"]
+
+[dependencies]
+iron = "0.5.1"
+router = "0.5.1"
+postgres = "0.15.1"
+bodyparser = "0.7.0"
