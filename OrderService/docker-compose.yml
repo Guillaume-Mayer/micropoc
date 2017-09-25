@@ -1,2 +1,26 @@
 version: "3"
 services:
+  store:
+    image: postgres:alpine
+    container_name: db
+    environment:
+    - POSTGRES_PASSWORD=pg123456
+    ports:
+    - 5432:5432
+    volumes:
+    - ./server/db:/docker-entrypoint-initdb.d:ro
+    - data:/var/lib/postgresql/data
+  cache:
+    image: redis:alpine
+    container_name: redis
+    ports:
+    - 6379:6379
+    volumes:
+    - redis:/data
+  api:
+    build: ./api
+    ports:
+    - 3000:3000
+    depends_on:
+    - store
+    - cache

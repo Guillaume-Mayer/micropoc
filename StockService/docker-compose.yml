@@ -1,0 +1,8 @@
+version: "3"
+services:
+  api:
+    image: gui77aume/soapui-mock-service
+    ports:
+    - 3001:3001
+    volumes:
+    - ./mocks.xml:/project.xml
