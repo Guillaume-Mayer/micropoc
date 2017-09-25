@@ -4,17 +4,18 @@ With Elastic Search <https://www.elastic.co/guide/en/elasticsearch/reference/cur
 
 ## Buscar productos
 
-<http://localhost:3000/search/martillo>
-<http://localhost:3000/search/clavos>
-<http://localhost:3000/search/caja>
-<http://localhost:3000/search/destor*>
-<http://localhost:3000/search/*ill*>
+* <http://localhost:3000/search/martillo>
+* <http://localhost:3000/search/clavos>
+* <http://localhost:3000/search/caja>
+* <http://localhost:3000/search/destor*>
+* <http://localhost:3000/search/*ill*>
 
 ## Agregar un producto
 
 ### Ejemplo
 
 POST http://localhost:3000/product
+
 {
     "id": "CC200",
     "name": "Caja de 200 clavos",
