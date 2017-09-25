@@ -2,4 +2,6 @@ FROM node:alpine
 
 COPY src /
 
-RUN npm install && node .
+RUN npm install
+
+ENTRYPOINT node .
