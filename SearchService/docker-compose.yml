@@ -1,0 +1,6 @@
+version: 3
+services:
+  store:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.1
+  api:
+    image: node:alpine
