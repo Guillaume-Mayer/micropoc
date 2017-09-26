@@ -10,7 +10,10 @@
 > It takes care of storing and replicating data used by Kubernetes across the entire cluster,
 > thanks to the Raft consensus algorithm, etcd can recover from hardware failure and network partitions.
 > In addition to Kubernetes, Cloud Foundry also uses etcd as their distributed key-value store.
+
 <https://thenewstack.io/about-etcd-the-distributed-key-value-store-used-for-kubernetes-googles-cluster-container-manager/>
+
+<https://github.com/coreos/etcd/>
 
 **KubeCtl**: Cliente (linea de comando)
 
