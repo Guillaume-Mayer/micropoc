@@ -57,7 +57,7 @@ fn main() {
                 let qty = json_body["qty"];
                 let o = Order {
                     id: 0,
-                    client: client.,
+                    client: client,
                     product: product,
                     qty: qty,
                     status: "Initial".to_owned(),
