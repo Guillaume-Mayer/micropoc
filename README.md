@@ -4,7 +4,8 @@
 
 ## Conceptos
 
-- [Mesh & Service Architecture (MASA)](conceptos/MASA.md)
+- [Mesh & Service Architecture](conceptos/MASA.md)
+- [HATEOAS](conceptos/HATEOAS.md)
 - Service Discovery
 - API Gateway
 - Load Balancing
@@ -19,10 +20,9 @@
 - Deployment
 - Scheduling
 - Job Management
-- Configuration Management
+- [Configuration Management](conceptos/config.md)
 - Event Driven Architecture
 - Continuous Integration/Delivery
-- HATEOAS
 
 ## POC
 
