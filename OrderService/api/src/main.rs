@@ -2,6 +2,11 @@ extern crate iron;
 extern crate router;
 extern crate postgres;
 extern crate bodyparser;
+extern crate serde;
+extern crate serde_json;
+
+#[macro_use]
+extern crate serde_derive;
 
 use iron::prelude::*;
 use iron::status;
@@ -12,6 +17,7 @@ use std::env;
 use std::net::{Ipv4Addr, SocketAddrV4};
 use postgres::{Connection, TlsMode};
 
+#[allow(dead_code)]
 struct Client {
     id: i32,
     name: String,
@@ -21,13 +27,11 @@ struct Client {
     depto: String
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Deserialize)]
 struct Order {
-    id: i32,
     client: i32,
     product: String,
     qty: i32,
-    status: String
 }
 
 fn main() {
@@ -42,38 +46,37 @@ fn main() {
     router.get("/order/:id", get_order, "get_order");
     router.post("/order", post_order, "post_order");
 
+    // Get Order Handler
     fn get_order(req: &mut Request) -> IronResult<Response> {
-        let ref id = req.extensions.get::<Router>().unwrap().find("id").unwrap();
         let content_type : Mime = "application/json".parse().unwrap();
+        let ref id = req.extensions.get::<Router>().unwrap().find("id").unwrap();
         Ok(Response::with((content_type, status::Ok, format!("{{\"order\": \"{}\"}}", id))))
     }
 
+    // Post Order Handler
     fn post_order(req: &mut Request) -> IronResult<Response> {
-        let json_body = req.get::<bodyparser::Json>();
-        match json_body {
-            Ok(Some(json_body)) => {
-                let product = json_body["product"];
-                let client = json_body["client"];
-                let qty = json_body["qty"];
-                let o = Order {
-                    id: 0,
-                    client: client,
-                    product: product,
-                    qty: qty,
-                    status: "Initial".to_owned(),
-                };
-                println!("order: {:?}", o);
+        let content_type : Mime = "application/json".parse().unwrap();
+        let body = req.get::<bodyparser::Struct<Order>>();
+        match body {
+            Ok(Some(body)) => {
+                insert_order(&body);
             },
             Ok(None) => println!("No body"),
             Err(err) => println!("Error: {:?}", err)
-        }
-        /*let conn = Connection::connect("postgresql://orders:order123@localhost:5432", TlsMode::None).unwrap();
-         conn.execute(
-            "INSERT INTO client (name, email, comuna, direccion, depto) VALUES ($1, $2, $3, $4, $5)",
-            &[&cli.name, &cli.email, &cli.comuna, &cli.direccion, &cli.depto]
-            ).unwrap();*/
-        let content_type : Mime = "application/json".parse().unwrap();
+        };
         Ok(Response::with((content_type, status::Ok, format!("{{\"order\": \"newID\"}}"))))
+    }
+
+    // Insert an order in DB
+    fn insert_order(order: &Order) {
+        let conn = Connection::connect("postgresql://orders:order123@localhost:5432", TlsMode::None).unwrap();
+        match conn.execute(
+            "INSERT INTO orders (product, qty, client) VALUES ($1, $2, $3)",
+            &[&order.product, &order.qty, &order.client]
+            ) {
+                Ok(status) => println!("Insert OK [status={}]", status),
+                Err(err) => println!("Error: {:?}", err)
+            };
     }
 
     // Server
