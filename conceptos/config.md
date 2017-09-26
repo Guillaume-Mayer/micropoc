@@ -1,6 +1,6 @@
 # Configuration Management
 
-Se considera una buena practica separar el código aplicativo y configuración.
+Se considera una buena practica separar el código aplicativo y configuración. Es un objeto Kubernetes por lo tanto se describe en un manifiesto Yaml o Json.
 
 ## ConfigMap API
 
@@ -8,7 +8,13 @@ Se considera una buena practica separar el código aplicativo y configuración.
 - Set of Key/Value
 - Byte arrays are serialized as base64 encoded
 
-### Ejemplo
+### Las valores se usan en los pods de tres formas
+
+- Environment variables
+- Command-line arguments for a container
+- Config files in a volume
+
+## Ejemplo
 
 ```yaml
 apiVersion: v1
@@ -38,3 +44,16 @@ apiVersion: v1
 ## Secrets API
 
 Similar a ConfigMap API pero encriptado.
+
+## Pros
+
+- Integrado naturalmente en Kubernetes (via manifiestos)
+- Centralizado y distribuido (via Etcd)
+
+## Cons
+
+- No se destacó ninguno
+
+## Alternativas
+
+- Spring Cloud Config pero en Java solamente
