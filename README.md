@@ -1,8 +1,10 @@
 # MicroServices: Concepts & Poc
 
+- [Kubernetes](Kubernetes.md)
+
 ## Conceptos
 
-- [Kubernetes](Kubernetes.md)
+- [Mesh & Service Architecture (MASA)](conceptos/MASA.md)
 - Service Discovery
 - API Gateway
 - Load Balancing
@@ -11,9 +13,16 @@
 - Centralized Metrics
 - Distributed Tracing
 - Resilience & Fault Tolerance
-- Auto Scaling & Self Healing
-- Packaging, Deployment & Scheduling
+- Auto Scaling
+- Self Healing
+- Packaging
+- Deployment
+- Scheduling
 - Job Management
+- Configuration Management
+- Event Driven Architecture
+- Continuous Integration/Delivery
+- HATEOAS
 
 ## POC
 

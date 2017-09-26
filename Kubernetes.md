@@ -87,12 +87,21 @@ Permite rollout de replicaset, rollback de otro deployment, escaleamiento, rollo
 
 ## Docker vs Kubernetes
 
+Kubernetes ocupa Docker como runtime de contenedor (via *Kubelet*) y como formato para las imagenes.
+
 Docker | Kubernetes
 ------ | ----------
-docker-cli | kubectl <https://kubernetes.io/docs/user-guide/docker-cli-to-kubectl/>
-docker-compose | kompose
-docker-machine | ??
-docker swarm | ??
+docker-cli | kubectl
+docker-compose | kubectl
+docker-machine | N/A
+swarm | cluster
+stack | pod
+service | service
+Dockerfile | Dockerfile
+docker-compose.yml | pod manifest
+
+<https://kubernetes.io/docs/user-guide/docker-cli-to-kubectl/>
+
 
 [scene1]: img/scenes-from-kubernetes-page1.svg "Scenes from Kubernetes"
 [scene2]: img/scenes-from-kubernetes-page2.svg "Scenes from Kubernetes"
