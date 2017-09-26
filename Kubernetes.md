@@ -60,6 +60,8 @@ Todo en Kubernetes es decalarativo, todos los objetos se describen en un manifes
 
 **Minion**: Slave (?)
 
+![Scene 1][scene1]
+
 ## Docker vs Kubernetes
 
 Docker | Kubernetes
@@ -70,3 +72,4 @@ docker-machine | ??
 docker swarm | ??
 
 [scene1]: img/scenes-from-kubernetes-page1.svg "Scenes from Kubernetes"
+[scene2]: img/scenes-from-kubernetes-page2.svg "Scenes from Kubernetes"
