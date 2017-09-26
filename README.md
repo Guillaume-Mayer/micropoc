@@ -3,6 +3,9 @@
 ## Conceptos
 
 - [Kubernetes](Kubernetes.md)
+- Service Discovery
+- API Gateway
+- Event Bus
 
 ## POC
 
