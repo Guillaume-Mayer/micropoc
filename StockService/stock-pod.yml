@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stock
+spec:
+  containers:
+  - name: api
+    image: gui77aume/soapui-mock-service
+    ports:
+    - containerPort: 3001
+    volumeMounts:
+    - mountPath: /project.xml
+      name: mock-file
+  volumes:
+  - name: mock-file
+    hostPath:
+      path: /home/walmart/micropoc/StockService/mocks.xml
