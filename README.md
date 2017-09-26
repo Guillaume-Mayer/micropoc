@@ -5,7 +5,15 @@
 - [Kubernetes](Kubernetes.md)
 - Service Discovery
 - API Gateway
+- Load Balancing
 - Event Bus
+- Centralized Logging
+- Centralized Metrics
+- Distributed Tracing
+- Resilience & Fault Tolerance
+- Auto Scaling & Self Healing
+- Packaging, Deployment & Scheduling
+- Job Management
 
 ## POC
 
