@@ -6,7 +6,7 @@
 
 - [Mesh & Service Architecture](conceptos/MASA.md)
 - [HATEOAS](conceptos/HATEOAS.md)
-- Service Discovery
+- [Service Discovery](conceptos/discovery.md)
 - API Gateway
 - Load Balancing
 - Event Bus
