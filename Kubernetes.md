@@ -50,6 +50,8 @@ Todo en Kubernetes es decalarativo, todos los objetos se describen en un manifes
 
 **Service**: Un servicio es lo que permite acceder a un conjunto de pods de forma unificada, descubriendo los servicios y puertos publicados por los contenedores en los nodos. Mapea los puertos de los multiples servicios a puertos accesibles externamente. Tiene capabilidades como *Load Balancing*, *rolling update*, *label selections*. **Es la noción de Kubernetes que se acerca lo mas de lo que a veces se llama un micro-servicio.**. Se describe en un manifest yaml o json.
 
+**Ingress**: Settings for accessing pods from the Internet
+
 **ReplicaSet**: Permite definir cuantos *pods* tendran que ejecutarse. Se describe en un manifest yaml o json.
 
 **Deployment**: Permite describir cambios de *pods* o de *replicaset*, puede controlar otros *replicaset*, *pods* o incluso otros *deployment* objets.
