@@ -55,8 +55,9 @@ Similar a ConfigMap API pero encriptado.
 
 ## Cons
 
-- No se destacó ninguno
+- Permitiendo interactuar con varios tipos de endpoints, Kubernetes no provee una manera unificada de leer los parametres en los servicios, se tienen que pasar por variables de entorno o volume files.
 
 ## Alternativas
 
 - Spring Cloud Config pero en Java solamente
+- Centralizar configuraciones manualmente en un Key/Value Store (CosmosDB por ejemplo)
