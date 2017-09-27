@@ -10,7 +10,8 @@
 - [API Gateway](conceptos/apigateway.md)
 - Load Balancing
 - Event Bus
-- Centralized Logging
+- [Monitoring](conceptos/monitor.md)
+- [Centralized Logging](conceptos/logging.md)
 - Centralized Metrics
 - Distributed Tracing
 - Resilience & Fault Tolerance
