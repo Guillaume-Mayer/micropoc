@@ -13,3 +13,15 @@ Es un conjunto de tecnologias (LXD, namespace, sysgroup, Docker) que permiten pa
 ## Kubernetes
 
 Kubernetes es un ecosistema **OpenSource** procedente de la experiencia de Google en los contenedores, su proposito principal es de abstraer la complejidad de la infraestructura (cluster de máquinas virtuales, fisicas o en el Cloud), uno le pide de ejecutar un servicio sin importarse donde corre ese servicio.
+
+Kubernetes cubre las necesidades siguientes:
+
+* Service Discovery
+* Load Balancing
+* API Gateway
+* Resilience (Fault Tolerance)
+* Self Healing
+* High Availability
+* Centralized Configuration Management
+* Cloud Native
+* Monitoring

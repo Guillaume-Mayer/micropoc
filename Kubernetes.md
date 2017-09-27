@@ -77,6 +77,8 @@ Permite rollout de replicaset, rollback de otro deployment, escaleamiento, rollo
 
 **Minion**: Cada nodo (con un *Kubelet*) que recibe ordenes de un *master*.
 
+[Kubernetes][archi]
+
 ## Docker vs Kubernetes
 
 Kubernetes ocupa Docker como runtime de contenedor (via *Kubelet*) y como formato para las imagenes.
@@ -97,3 +99,4 @@ docker-compose.yml | pod manifest
 
 [scene1]: img/scenes-from-kubernetes-page1.svg "Scenes from Kubernetes"
 [scene2]: img/scenes-from-kubernetes-page2.svg "Scenes from Kubernetes"
+[archi]: img/kubernetes_high_level_architecture1.png "High Level Architecture"
