@@ -9,7 +9,7 @@
 - [HATEOAS](conceptos/HATEOAS.md)
 - [Service Discovery](conceptos/discovery.md)
 - [API Gateway](conceptos/apigateway.md)
-- Load Balancing
+- [Load Balancing](conceptos/loadbalancing.md)
 - Event Bus
 - [Monitoring](conceptos/monitor.md)
 - [Centralized Logging](conceptos/logging.md)
