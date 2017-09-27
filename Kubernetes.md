@@ -50,14 +50,6 @@ Todo en Kubernetes es decalarativo, todos los objetos se describen en un manifes
 
 **Service**: Un servicio es lo que permite acceder a un conjunto de pods de forma unificada, descubriendo los servicios y puertos publicados por los contenedores en los nodos. Mapea los puertos de los multiples servicios a puertos accesibles externamente. Tiene capabilidades como *Load Balancing*, *rolling update*, *label selections*. **Es la noción de Kubernetes que se acerca lo mas de lo que a veces se llama un micro-servicio.**. Se describe en un manifest yaml o json.
 
-Modo **proxy userspce**:
-
-![Service][service-userspace]
-
-Modo **proxy iptables**:
-
-![Service][service-iptables]
-
 **ReplicaSet**: Permite definir cuantos *pods* tendran que ejecutarse. Se describe en un manifest yaml o json.
 
 **Deployment**: Permite describir cambios de *pods* o de *replicaset*, puede controlar otros *replicaset*, *pods* o incluso otros *deployment* objets.
@@ -105,5 +97,3 @@ docker-compose.yml | pod manifest
 
 [scene1]: img/scenes-from-kubernetes-page1.svg "Scenes from Kubernetes"
 [scene2]: img/scenes-from-kubernetes-page2.svg "Scenes from Kubernetes"
-[service-userspace]: img/services-userspace-overview.svg "UserSpace Mode"
-[service-iptables]: img/services-iptables-overview.svg "IPTables Mode"
