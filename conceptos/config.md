@@ -1,6 +1,9 @@
 # Configuration Management
 
-Se considera una buena practica separar el código aplicativo y configuración. Es un objeto Kubernetes por lo tanto se describe en un manifiesto Yaml o Json.
+Se considera una buena practica separar el código aplicativo y configuración.
+
+Las soluciones implementadas en Kubernetes para ese proposito se llaman ConfigMap y Secrets APIs.
+Son ciudadanos de primera clase en Kubernetes ya que son "Kubernetes Objects" (y por lo tanto se describen en manifiestos Yaml o Json).
 
 ## ConfigMap API
 
