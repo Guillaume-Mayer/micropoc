@@ -77,7 +77,7 @@ Permite rollout de replicaset, rollback de otro deployment, escaleamiento, rollo
 
 **Minion**: Cada nodo (con un *Kubelet*) que recibe ordenes de un *master*.
 
-[Kubernetes][archi]
+![Kubernetes][archi]
 
 ## Docker vs Kubernetes
 
